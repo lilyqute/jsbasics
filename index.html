@@ -1,66 +1,98 @@
 <!DOCTYPE html>
 <html>
-    
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!DOCTYPE html>
-<html>
 	<head>
+	<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><!-- initial-scale=1 初始縮放比，不放大，maximum-scale=1 使用者無法自行調整 RWD手機版介面 早期當年沒網站為手機優化，手機能自動縮放-->
+
 	<title>my first practice</title>
 	<meta charset="utf-8"/>
-	<style></style>
-	</head>
+	<style>
+		.frame{
+				background-color:grey;
+				width:1000px; margin-left:auto; margin-right:auto;
+				}
+		.left{
+				background-color:white;
+				width:250px;
+	/*float:left;*切分左右欄的方式之一*/
+				padding:5px;/*爆板了，真正的寬高=width+border+padding X2*/
+				display:inline-block;
+				vertical-align:top;
+}
+		.middle{
+				background-color:white;
+				width:250px;
+	/*float:left;*切分左右欄的方式之一*/
+				padding:5px;/*爆板了，真正的寬高=width+border+padding X2*/
+				display:inline-block;
+				vertical-align:top;
+}
+		
+		.right{
+				background-color:white;
+				width:250px;
+	/*float:left;*切分左右欄的方式之一*/
+				padding:5px;/*爆板了，真正的寬高=width+border+padding X2*/
+				display:inline-block;/*inline不會斷行 block 又可以變化尺寸，但空白會有真的影響力要注意，解決方式一緊緊相連 方式二預留空間* 還有css flex*/
+				vertical-align:top;
+}
+@media screen and (max-width:500px){
+ 	/*滿足以上條件，套用這裡的CSS*/
+ 	.frame{width:320px;}
+ }
+	</style>
+</head>
 	
 	
 
 <body>
 
-<div id="header">
-<h1>About Lily</h1>
-<img src="dreampilot.png" alt="self-portrait" style="width:200px;height:200px">
+
+<div id="header"> 
+	<h1>About Lily</h1>
+	<div><img src="dreampilot.png" alt="self-portrait"; width= "300px" ></div>
 </div>
 
-<div style="border:20px groove">
 
-<div id="article">
-
-	<li><h1 style="color:blue;">個人檔案 Personal bio</h1></li>
+<div style="background-color:grey;">
+	<div class="frame">
+		<div class="left">
+			<li><h1 style="color:blue;">個人檔案<br>Personal bio<br></h1></li>
 		
-		<ol>
-		<li><p>台北萬華人，早產缺氧導致先天性腦性麻痺，4歲踏出人生第一步</p></li>
-		<li><p>棄法從文，台灣大學圖書資訊學系畢業，在台大待了五年</p></li>
-		<li><p>之前修過Java，但勉強及格，也用過Dreamweaver 做簡單網站</p></li>
-		<li><p>狗跟數學是我最害怕的東西</p></li>		
-		</ol>
+			<ol>
+				<li><p>台北萬華人，早產缺氧導致先天性腦性麻痺，4歲踏出人生第一步</p></li>
+				<li><p>棄法從文，台灣大學圖書資訊學系畢業，在台大待了五年</p></li>
+				<li><p>之前修過Java，但勉強及格，也用過Dreamweaver 做簡單網站</p></li>
+				<li><p>狗跟數學是我最害怕的東西</p></li>		
+			</ol>
+		</div>
 
-
-
-
-	<li><h1 style="color:blue;">昔日榮光 Past achievements</h1></li>
+		<div class="middle">
+			<li><h1 style="color:blue;">昔日榮光<br>Past achievements<br></h1></li>
 		
-		<ol>
-		<li><p>104學年度 台大 優秀青年</p></li>
-		<li><p>104年度公費留學 學習科學 學門 錄取</p></li>
-		<li><p>雅思（IELTS） 7.5/9 、多益（TOEIC）970/990  </p></li>
-		</ol>
+			<ol>
+				<li><p>104學年度 台大 優秀青年</p></li>
+				<li><p>104年度公費留學 學習科學 學門 錄取</p></li>
+				<li><p>雅思（IELTS） 7.5/9 、多益（TOEIC）970/990  </p></li>
+			</ol>
+		</div>
 
+		<div class="right">
+			<li><h1 style="color:blue;">未來理想<br>Future goals<br></h1></li>
+			<ol>
+				<li><p>明年赴美念learning sciences(了解人如何學習)</p></li>
+				<li><p>成為一個善用科技與媒體縮小教育資源落差、幫助個人發展的facilatator</p></li>
+				<li><p>到西班牙自助旅遊一個月</p></li>
+			</ol>
+		</div>
+		
 
+		<iframe src="https://embed-ssl.ted.com/talks/maysoon_zayid_i_got_99_problems_palsy_is_just_one.html" name="iframe_a"></iframe> 
+		<p><a href="https://embed-ssl.ted.com/talks/maysoon_zayid_i_got_99_problems_palsy_is_just_one.html" target="iframe_a">什麼是腦性麻痺</a></p>
 
-<li><h1 style="color:blue;">未來理想 Future goals</h1></li>
-		<ol>
-		<li><p>明年赴美念learning sciences(了解人如何學習)</p></li>
-		<li><p>成為一個善用科技與媒體縮小教育資源落差、幫助個人發展的facilatator</p></li>
-		<li><p>到西班牙自助旅遊一個月</p></li>
-		</ol>
-
-	</div>
 </div>
-<div id="aside">
+
 	
-	<iframe width="640" height="360" src="https://embed-ssl.ted.com/talks/maysoon_zayid_i_got_99_problems_palsy_is_just_one.html" name="iframe_a"></iframe> 
-	<p><a href="https://embed-ssl.ted.com/talks/maysoon_zayid_i_got_99_problems_palsy_is_just_one.html" target="iframe_a">什麼是腦性麻痺</a></p>
-
 
 
 <div id="footer">
@@ -70,27 +102,14 @@ Copyright © wenyuan chen 2016 summer
 
 
 <style>
-#box
-	{
-    width: 500px;
-    padding: 25px;
-    border: 50px groove;
-    margin: 25px;
-}
+
+
 
 #header {
     background-color:#FFB7DD;
     color:white;
-    text-align:center;
+    margin-left:auto; margin-right:auto;
     padding:5px; 
-}
-
-#article {
-    width:100%;
-    float:left;
-    text-align:left;
-    color:#0000AA;
-    padding:10px; 
 }
 
 #footer {
@@ -103,4 +122,3 @@ Copyright © wenyuan chen 2016 summer
 </style>
 </body>
 </html>
-     
